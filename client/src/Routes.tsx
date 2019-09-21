@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route, Link } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Register } from './pages/Register';
 import { Login } from './pages/Login';
+import { Bye } from './pages/Bye';
 
 export const Routes: React.FC = () => {
   return (
@@ -18,11 +19,15 @@ export const Routes: React.FC = () => {
           <div>
             <Link to="/register">Register</Link>
           </div>
+          <div>
+            <Link to="/bye">Bye</Link>
+          </div>
         </header>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/login" exact component={Login} />
           <Route path="/register" exact component={Register} />
+          <Route path="/bye" exact component={Bye} />
         </Switch>
       </>
     </BrowserRouter>
