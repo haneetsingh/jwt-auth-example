@@ -46,7 +46,7 @@ import { sendRefreshToken } from "./sendRefreshToken";
 
 		sendRefreshToken(res, createRefreshToken(user));
 
-		return res.send({ ok: false, accessToken: createAccessToken(user) });
+		return res.send({ ok: true, accessToken: createAccessToken(user) });
 	});
 
 	await createConnection();
